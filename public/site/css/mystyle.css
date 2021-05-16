@@ -1,0 +1,60 @@
+.mt-2 {
+    margin-top: 30px !important;
+}
+
+.mt-3 {
+    margin-top: 60px !important;
+}
+
+.mb-2 {
+    margin-bottom: -30px !important;
+}
+
+.mb--4 {
+    margin-bottom: 4px;
+}
+.pb-create-2{
+    margin-top:-10px;
+    padding-bottom:10px ;
+
+}
+.size-image-ch {
+    width: 345px;
+    height: 187px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.pt-1 {
+    padding-top: 10px;
+}
+
+/* barra lateral */
+
+/* The emerging W3C standard that is currently Firefox-only  */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #001a4e rgba(255, 166, 0, 0);
+}
+
+/* Works on Chrome/Edge/Safari */
+
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0085b500;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #001a4e;
+    border-radius: 60px;
+    border: 1px solid #0085b500;
+}
+
+.text-black {
+    color: #000;
+}

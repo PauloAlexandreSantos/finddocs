@@ -30,10 +30,10 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
         ];*/
         return [
-            'vc_nomeUtilizador' =>"luisagrilo",
-            'vc_primemiroNome' => "Luísa Maria",
-            'vc_apelido' => "Alves Grilo",
-            'vc_email' =>"luisagrilo@gmail.com",
+            'vc_nomeUtilizador' =>"agentesimão",
+            'vc_primemiroNome' => "Simão Pedro",
+            'vc_apelido' => "Sergio",
+            'vc_email' =>"e@e.e",
             'email_verified_at' => now(),
             'password' => bcrypt("12345678"), // password
              'vc_telefone'=>"",         

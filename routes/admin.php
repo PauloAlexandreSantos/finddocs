@@ -35,17 +35,24 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('admin/users/editar/{id}', ['as' => 'admin.users.editar', 'uses' => 'Admin\UserController@editar']);
     //User-End
 
-    
 
 
-    Route::group(['prefix' => 'classes'], function () {
-        Route::get('', ['as' => 'classes', 'uses' => 'Admin\ClasseController@listar']);
-        Route::get('criar', ['as' => 'classes.criar', 'uses' => 'Admin\ClasseController@criar']);
-        Route::post('cadastrar', ['as' => 'classes.cadastrar', 'uses' => 'Admin\ClasseController@cadastrar']);
-        Route::get('{id}/eliminar', ['as' => 'classes.eliminar', 'uses' => 'Admin\ClasseController@eliminar']);
-        Route::get('{id}/editar', ['as' => 'classes.editar', 'uses' => 'Admin\ClasseController@editar']);
-        Route::put('{id}/actualizar', ['as' => 'classes.actualizar', 'uses' => 'Admin\ClasseController@actualizar']);
+
+    Route::group(['prefix' => 'admin.category'], function () {
+        Route::get('', ['as' => 'admin.category', 'uses' => 'Admin\CategoryController@index']);
+        Route::get('create', ['as' => 'admin.category.create', 'uses' => 'Admin\CategoryController@create']);
+        Route::post('store', ['as' => 'admin.category.store', 'uses' => 'Admin\CategoryController@store']);
+        Route::get('{id}/destroy', ['as' => 'admin.category.destroy', 'uses' => 'Admin\CategoryController@destroy']);
+        Route::get('{id}/edit', ['as' => 'admin.category.edit', 'uses' => 'Admin\CategoryController@edit']);
+        Route::put('{id}/update', ['as' => 'admin.category.update', 'uses' => 'Admin\CategoryController@update']);
     });
 
-
+    Route::group(['prefix' => 'admin.citizen'], function () {
+        Route::get('', ['as' => 'admin.citizen', 'uses' => 'Admin\CitizenController@index']);
+        Route::get('create', ['as' => 'admin.citizen.create', 'uses' => 'Admin\CitizenController@create']);
+        Route::post('store', ['as' => 'admin.citizen.store', 'uses' => 'Admin\CitizenController@store']);
+        Route::get('{id}/destroy', ['as' => 'admin.citizen.destroy', 'uses' => 'Admin\CitizenController@de']);
+        Route::get('{id}/edit', ['as' => 'admin.citizen.edit', 'uses' => 'Admin\CitizenController@edit']);
+        Route::put('{id}/update', ['as' => 'admin.citizen.update', 'uses' => 'Admin\CitizenController@update']);
+    });
 });
